@@ -1,0 +1,933 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Laboratorium Zabawy Suwałki | Urodziny, warsztaty i animacje dla dzieci</title>
+<meta name="description" content="Kreatywne urodziny, warsztaty, animacje, eventy i bale dla dzieci w Suwałkach. Slime, eksperymenty i zabawa z efektem WOW. Zadzwoń: 730 337 168.">
+<meta name="theme-color" content="#C21F8A">
+<link rel="icon" type="image/png" href="images/favicon-32.png">
+<link rel="apple-touch-icon" href="images/favicon-192.png">
+<link rel="canonical" href="https://laboratorium-zabawy.vercel.app/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Laboratorium Zabawy Suwałki">
+<meta property="og:description" content="Tworzymy kreatywne eventy od pomysłu po realizację! Urodziny, warsztaty, animacje i bale dla dzieci.">
+<meta property="og:image" content="https://laboratorium-zabawy.vercel.app/images/hero.jpg">
+<meta property="og:locale" content="pl_PL">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Laboratorium Zabawy",
+  "description": "Kreatywne urodziny, warsztaty, animacje, eventy i bale dla dzieci w Suwałkach.",
+  "image": "https://laboratorium-zabawy.vercel.app/images/hero.jpg",
+  "logo": "https://laboratorium-zabawy.vercel.app/images/logo.jpg",
+  "telephone": "+48730337168",
+  "email": "laboratoriumzabawy.info@gmail.com",
+  "url": "https://laboratorium-zabawy.vercel.app/",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Teofila Noniewicza 93A",
+    "addressLocality": "Suwałki",
+    "postalCode": "16-400",
+    "addressCountry": "PL"
+  },
+  "areaServed": "Suwałki",
+  "sameAs": [
+    "https://www.facebook.com/100077829836074",
+    "https://www.instagram.com/laboratoriumzabawy"
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "189"
+  }
+}
+</script>
+<style>
+:root {
+  --cream: #FFF9F2;
+  --white: #FFFFFF;
+  --ink: #1E2142;
+  --ink-soft: #4A4E6E;
+  --pink: #C21F8A;
+  --pink-d: #A8176F;
+  --pink-50: #FCEEF6;
+  --sky: #4FA3E0;
+  --sky-d: #1F6FB0;
+  --sky-50: #EAF5FD;
+  --sun: #FFD23F;
+  --line: rgba(30, 33, 66, 0.1);
+  --ff-head: 'Quicksand', system-ui, sans-serif;
+  --ff-body: 'Nunito', system-ui, sans-serif;
+  --ease: cubic-bezier(.22, 1, .36, 1);
+  --nav-h: 72px;
+  --r-lg: 32px;
+  --r-md: 24px;
+  --shadow: 0 18px 50px -20px rgba(30, 33, 66, 0.25);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; scroll-padding-top: var(--nav-h); -webkit-text-size-adjust: 100%; }
+body {
+  background: var(--cream);
+  color: var(--ink);
+  font-family: var(--ff-body);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.65;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+img { display: block; max-width: 100%; }
+a { color: inherit; text-decoration: none; }
+button { font: inherit; color: inherit; background: none; border: 0; cursor: pointer; }
+
+.wrap { width: 100%; max-width: 1240px; margin: 0 auto; padding: 0 48px; }
+.sec { position: relative; padding: 100px 0; }
+
+.eyebrow {
+  display: inline-flex; align-items: center; gap: 10px;
+  font-size: 13px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--pink);
+}
+.eyebrow::before {
+  content: ''; width: 10px; height: 10px; border-radius: 50%;
+  background: var(--sun); box-shadow: 14px 0 0 var(--sky);
+  margin-right: 14px;
+}
+.h2 {
+  font-family: var(--ff-head); font-weight: 700;
+  font-size: clamp(32px, 4vw, 48px); line-height: 1.15; letter-spacing: -0.01em;
+  margin-top: 14px; text-wrap: balance;
+}
+.lead { font-size: 17px; color: var(--ink-soft); max-width: 560px; margin-top: 16px; text-wrap: pretty; }
+.sec-head { text-align: center; display: flex; flex-direction: column; align-items: center; margin-bottom: 56px; }
+.sec-head .lead { margin-left: auto; margin-right: auto; }
+
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+  padding: 16px 36px; border-radius: 999px;
+  font-family: var(--ff-body); font-size: 15px; font-weight: 700; letter-spacing: 0.01em;
+  transition: transform .4s var(--ease), background .3s, box-shadow .4s var(--ease), color .3s;
+  white-space: nowrap;
+}
+.btn svg { width: 18px; height: 18px; flex-shrink: 0; }
+.btn--pink { background: var(--pink); color: var(--white); box-shadow: 0 12px 30px -12px rgba(194, 31, 138, 0.6); }
+.btn--pink:hover { background: var(--pink-d); transform: translateY(-3px); box-shadow: 0 18px 36px -14px rgba(194, 31, 138, 0.7); }
+.btn--ghost { border: 1.5px solid rgba(30, 33, 66, 0.25); color: var(--ink); }
+.btn--ghost:hover { border-color: var(--ink); transform: translateY(-3px); }
+.btn--sun { background: var(--sun); color: var(--ink); }
+.btn--sun:hover { transform: translateY(-3px); box-shadow: 0 16px 32px -14px rgba(255, 210, 63, 0.8); }
+
+/* Fale między sekcjami */
+.wave { position: absolute; left: 0; right: 0; height: 60px; pointer-events: none; z-index: 1; }
+.wave svg { width: 100%; height: 100%; display: block; }
+.wave--top { top: -59px; }
+.wave--bottom { bottom: -59px; transform: scaleY(-1); }
+
+/* Fade - kolejka */
+.fade { opacity: 0; transform: translateY(24px); transition: opacity .8s var(--ease), transform .8s var(--ease); }
+.fade.on { opacity: 1; transform: none; }
+
+/* ===== NAV ===== */
+.nav {
+  position: sticky; top: 0; z-index: 50; height: var(--nav-h);
+  background: rgba(255, 249, 242, 0.86);
+  backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+  transition: box-shadow .4s var(--ease);
+}
+.nav.is-scrolled { box-shadow: 0 8px 30px -18px rgba(30, 33, 66, 0.35); }
+.nav__in { height: 100%; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+.logo { display: flex; align-items: center; gap: 12px; }
+.logo img { width: 48px; height: 48px; border-radius: 50%; object-fit: cover; box-shadow: 0 0 0 2px var(--white), 0 6px 16px -6px rgba(30, 33, 66, 0.35); }
+.logo span { font-family: var(--ff-head); font-weight: 700; font-size: 18px; line-height: 1.1; }
+.logo small { display: block; font-family: var(--ff-body); font-size: 12px; font-weight: 600; color: var(--ink-soft); letter-spacing: 0.04em; }
+.nav__links { display: flex; align-items: center; gap: 30px; }
+.nav__links a:not(.btn) { font-size: 15px; font-weight: 600; position: relative; padding: 6px 0; }
+.nav__links a:not(.btn)::after {
+  content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 2px; border-radius: 2px;
+  background: var(--pink); transform: scaleX(0); transform-origin: left; transition: transform .45s var(--ease);
+}
+.nav__links a:not(.btn):hover::after { transform: scaleX(1); }
+.nav__cta { padding: 15px 36px; }
+.burger { display: none; width: 46px; height: 46px; border-radius: 50%; background: var(--white); box-shadow: var(--shadow); position: relative; }
+.burger span { position: absolute; left: 14px; right: 14px; height: 2px; border-radius: 2px; background: var(--ink); transition: transform .45s var(--ease), opacity .3s; }
+.burger span:nth-child(1) { top: 17px; }
+.burger span:nth-child(2) { top: 22px; }
+.burger span:nth-child(3) { top: 27px; }
+.burger.open span:nth-child(1) { transform: translateY(5px) rotate(45deg); }
+.burger.open span:nth-child(2) { opacity: 0; }
+.burger.open span:nth-child(3) { transform: translateY(-5px) rotate(-45deg); }
+
+.mmenu {
+  position: fixed; inset: var(--nav-h) 0 0 0; z-index: 49;
+  background: var(--cream);
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 22px;
+  opacity: 0; visibility: hidden; transform: translateY(-12px);
+  transition: opacity .45s var(--ease), transform .45s var(--ease), visibility .45s;
+}
+.mmenu.open { opacity: 1; visibility: visible; transform: none; }
+.mmenu a:not(.btn) { font-family: var(--ff-head); font-size: 26px; font-weight: 700; }
+.mmenu .btn { font-family: var(--ff-head); font-size: 20px; font-weight: 700; padding: 16px 40px; margin-bottom: 14px; }
+
+@media (max-width: 980px) {
+  .nav__links { display: none; }
+  .burger { display: block; }
+}
+
+/* ===== HERO ===== */
+.hero { position: relative; overflow: hidden; }
+.hero__in {
+  display: flex; align-items: stretch; gap: 48px;
+  height: calc(100svh - var(--nav-h)); min-height: 580px; max-height: 920px;
+}
+.hero__text { flex: 1.05; display: flex; flex-direction: column; justify-content: center; position: relative; z-index: 2; }
+.hero__h1 {
+  font-family: var(--ff-head); font-weight: 700;
+  font-size: clamp(40px, 4.6vw, 66px); line-height: 1.08; letter-spacing: -0.02em;
+  margin-top: 18px; text-wrap: balance;
+}
+.hero__h1 em {
+  font-style: normal; color: var(--pink);
+  background: linear-gradient(transparent 68%, rgba(255, 210, 63, 0.75) 68%, rgba(255, 210, 63, 0.75) 92%, transparent 92%);
+}
+.hero__sub { font-size: 18px; color: var(--ink-soft); max-width: 500px; margin-top: 22px; text-wrap: pretty; }
+.hero__sub-line { display: inline; }
+.hero__btns { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 34px; }
+
+.hero__media { flex: 0.95; position: relative; display: flex; align-items: center; justify-content: center; padding: 40px 0; min-width: 0; }
+.hero__photo {
+  position: relative; height: 100%; max-height: 640px; aspect-ratio: 1 / 1.02; max-width: 100%;
+  border-radius: 46% 54% 50% 50% / 52% 46% 54% 48%;
+  overflow: hidden; box-shadow: 0 40px 80px -40px rgba(194, 31, 138, 0.55);
+  animation: pop 1.2s var(--ease) .2s both, morph 16s ease-in-out 1.4s infinite alternate;
+}
+.hero__photo img { width: 100%; height: 100%; object-fit: cover; object-position: 60% 40%; }
+.hero__blob {
+  position: absolute; width: 78%; aspect-ratio: 1; border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, var(--sky-50), rgba(79, 163, 224, 0.35));
+  right: -8%; top: 6%; z-index: -1; filter: blur(2px);
+  animation: pop 1.4s var(--ease) .1s both;
+}
+
+.badge {
+  position: absolute; z-index: 3; display: flex; align-items: center; gap: 12px;
+  background: var(--white); border-radius: 20px; padding: 12px 18px 12px 12px;
+  box-shadow: var(--shadow); font-size: 14px; line-height: 1.3;
+  animation: rise 1s var(--ease) both, float 6s ease-in-out infinite;
+}
+.badge b { display: block; font-family: var(--ff-head); font-size: 17px; font-weight: 700; color: var(--ink); }
+.badge span { color: var(--ink-soft); font-weight: 600; }
+.badge__ico { width: 42px; height: 42px; border-radius: 14px; display: grid; place-items: center; flex-shrink: 0; }
+.badge__ico svg { width: 22px; height: 22px; }
+.badge--rating { right: -2%; bottom: 12%; animation-delay: .9s, 2s; }
+.badge--rating .badge__ico { background: var(--sun); color: var(--ink); }
+.badge--award { left: -4%; top: 10%; animation-delay: 1.05s, 3s; }
+.badge--award .badge__ico { background: var(--pink-50); color: var(--pink); }
+
+.deco { position: absolute; z-index: 1; pointer-events: none; animation: float 7s ease-in-out infinite; }
+.deco--1 { width: 26px; left: 3%; top: 6%; color: var(--sun); }
+.deco--2 { width: 20px; left: 46%; top: 9%; color: var(--sky); animation-delay: 1.5s; }
+.deco--3 { width: 22px; left: 40%; bottom: 12%; color: var(--pink); animation-delay: 3s; }
+.deco--4 { width: 14px; left: 8%; bottom: 18%; color: var(--sky); animation-delay: 2s; }
+
+.rise { animation: rise .9s var(--ease) both; }
+.rise:nth-child(1) { animation-delay: .1s; }
+.rise:nth-child(2) { animation-delay: .22s; }
+.rise:nth-child(3) { animation-delay: .34s; }
+.rise:nth-child(4) { animation-delay: .46s; }
+
+@keyframes rise { from { opacity: 0; transform: translateY(26px); } to { opacity: 1; transform: none; } }
+@keyframes pop { from { opacity: 0; transform: scale(.92); } to { opacity: 1; transform: none; } }
+@keyframes float { 0%, 100% { translate: 0 0; } 50% { translate: 0 -10px; } }
+@keyframes morph {
+  0% { border-radius: 46% 54% 50% 50% / 52% 46% 54% 48%; }
+  50% { border-radius: 54% 46% 44% 56% / 46% 54% 46% 54%; }
+  100% { border-radius: 50% 50% 56% 44% / 56% 50% 50% 44%; }
+}
+
+@media (max-width: 980px) {
+  .hero__in { flex-direction: column; height: auto; max-height: none; min-height: 0; gap: 0; }
+  .hero__text { padding-top: 48px; }
+  .hero__media { padding: 44px 0 72px; }
+  .hero__photo { height: auto; width: min(100%, 520px); }
+}
+@media (max-width: 768px) {
+  /* Zdjęcie wypełnia miejsce nad tekstem, tekst nachodzi na kremową mgiełkę */
+  .hero__in { min-height: calc(100svh - var(--nav-h)); padding-bottom: 28px; }
+  .hero__text { flex: none; padding-top: 0; margin-top: -40px; }
+  .hero__h1 { font-size: 36px; margin-top: 12px; }
+  .hero__sub { font-size: 16px; line-height: 1.55; margin-top: 14px; }
+  .hero__sub-line { display: block; }
+  .hero__btns { flex-direction: column; align-items: stretch; margin-top: 24px; gap: 4px; }
+  .hero__btns .btn { text-align: center; }
+  .hero__media { order: -1; flex: 1 0 auto; min-height: clamp(220px, 70vw, 320px); margin: 0 -20px; padding: 0; display: block; z-index: 0; }
+  .hero__photo {
+    position: absolute; inset: 0; width: 100%; height: 100%; max-height: none; aspect-ratio: auto;
+    border-radius: 0; box-shadow: none; animation: pop 1.2s var(--ease) .2s both;
+    /* Mgiełka jako maska: zdjęcie samo przechodzi w przezroczystość, bez widocznej krawędzi */
+    -webkit-mask-image: linear-gradient(to bottom, #000 calc(100% - 110px), rgba(0, 0, 0, 0.12) calc(100% - 40px), transparent 100%);
+    mask-image: linear-gradient(to bottom, #000 calc(100% - 110px), rgba(0, 0, 0, 0.12) calc(100% - 40px), transparent 100%);
+  }
+  .hero__photo img { object-position: 55% 78%; }
+  .hero__blob, .badge--award { display: none; }
+  /* "Zobacz ofertę" jako link tekstowy */
+  .hero__more { border: 0; padding: 12px 0; min-height: 44px; color: var(--ink); }
+  .hero__more::after { content: '→'; transition: transform .45s var(--ease); }
+  .hero__more:hover { transform: none; }
+  .hero__more:hover::after { transform: translateX(4px); }
+  .badge { padding: 10px 14px 10px 10px; font-size: 13px; border-radius: 16px; }
+  .badge b { font-size: 15px; }
+  .badge__ico { width: 36px; height: 36px; border-radius: 12px; }
+  .badge--rating { left: 20px; right: auto; top: 16px; bottom: auto; z-index: 3; }
+  .deco { display: none; }
+  .hero .eyebrow { font-size: 12px; letter-spacing: 0.07em; }
+  .hero .eyebrow::before { display: none; }
+}
+
+/* ===== OFERTA ===== */
+.offer__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+.card {
+  background: var(--white); border-radius: var(--r-lg); overflow: hidden;
+  border: 1px solid var(--line);
+  display: flex; flex-direction: column;
+  transition: transform .6s var(--ease), box-shadow .6s var(--ease), opacity .8s var(--ease);
+}
+.card:hover { transform: translateY(-8px); box-shadow: 0 30px 60px -30px rgba(30, 33, 66, 0.35); }
+.card__img { position: relative; aspect-ratio: 4 / 3; overflow: hidden; }
+.card__img img { width: 100%; height: 100%; object-fit: cover; transition: transform 1.2s var(--ease); }
+.card:hover .card__img img { transform: scale(1.06); }
+.card__tag {
+  position: absolute; left: 16px; top: 16px; z-index: 1;
+  width: 48px; height: 48px; border-radius: 16px; display: grid; place-items: center;
+  box-shadow: 0 10px 24px -10px rgba(30, 33, 66, 0.5);
+}
+.card__tag svg { width: 24px; height: 24px; }
+.t-pink { background: var(--pink); color: var(--white); }
+.t-sky { background: var(--sky-d); color: var(--white); }
+.t-sun { background: var(--sun); color: var(--ink); }
+.card__body { padding: 26px 28px 28px; display: flex; flex-direction: column; flex: 1; }
+.card__h { font-family: var(--ff-head); font-weight: 700; font-size: 24px; line-height: 1.2; }
+.card__p { color: var(--ink-soft); font-size: 15px; margin-top: 10px; text-wrap: pretty; }
+.card__link {
+  margin-top: auto; padding-top: 20px;
+  display: inline-flex; align-items: center; gap: 8px;
+  font-weight: 700; font-size: 15px; color: var(--pink);
+}
+.card__link svg { width: 18px; height: 18px; transition: transform .45s var(--ease); }
+.card:hover .card__link svg { transform: translateX(5px); }
+.offer__more { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 12px; margin-top: 44px; }
+.offer__more p { font-weight: 600; color: var(--ink-soft); margin-right: 4px; }
+.chip {
+  display: inline-flex; align-items: center; gap: 8px; padding: 10px 20px; border-radius: 999px;
+  background: var(--white); border: 1px solid var(--line); font-weight: 700; font-size: 14px;
+}
+.chip::before { content: ''; width: 8px; height: 8px; border-radius: 50%; background: var(--pink); }
+.chip:nth-child(3)::before { background: var(--sky); }
+
+@media (max-width: 980px) {
+  .offer__grid { grid-template-columns: repeat(2, 1fr); gap: 22px; }
+}
+@media (max-width: 640px) {
+  .offer__grid { grid-template-columns: 1fr; gap: 20px; }
+  .offer__more { margin-top: 36px; }
+  .offer__more p { flex-basis: 100%; text-align: center; margin: 0 0 2px; }
+  .card__body { padding: 22px 22px 24px; }
+  .card__h { font-size: 22px; }
+}
+
+/* ===== JAK TO WYGLĄDA ===== */
+.how { background: var(--sky-50); }
+.how .wave { color: var(--sky-50); }
+.steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; position: relative; counter-reset: step; }
+.steps::before {
+  content: ''; position: absolute; left: 16%; right: 16%; top: 0; height: 0;
+  border-top: 2px dashed rgba(31, 111, 176, 0.35);
+}
+.step {
+  position: relative; background: var(--white); border-radius: var(--r-lg);
+  padding: 36px 32px 34px; text-align: center; border: 1px solid rgba(31, 111, 176, 0.12);
+  transition: transform .6s var(--ease), box-shadow .6s var(--ease), opacity .8s var(--ease);
+}
+.step:hover { transform: translateY(-6px); box-shadow: 0 26px 50px -28px rgba(31, 111, 176, 0.45); }
+.step__num {
+  width: 64px; height: 64px; margin: -68px auto 18px; border-radius: 50%;
+  display: grid; place-items: center;
+  font-family: var(--ff-head); font-weight: 700; font-size: 24px;
+  box-shadow: 0 0 0 8px var(--sky-50);
+}
+.step:nth-child(1) .step__num { background: var(--pink); color: var(--white); }
+.step:nth-child(2) .step__num { background: var(--sun); color: var(--ink); }
+.step:nth-child(3) .step__num { background: var(--sky-d); color: var(--white); }
+.step__h { font-family: var(--ff-head); font-weight: 700; font-size: 22px; }
+.step__p { color: var(--ink-soft); font-size: 15px; margin-top: 10px; text-wrap: pretty; }
+.how__cta { display: flex; justify-content: center; margin-top: 48px; }
+.steps { margin-top: 64px; }
+
+@media (max-width: 860px) {
+  .steps { grid-template-columns: 1fr; gap: 48px; max-width: 480px; margin-left: auto; margin-right: auto; }
+  .steps::before { left: 50%; right: auto; top: 0; bottom: 40px; border-top: 0; border-left: 2px dashed rgba(31, 111, 176, 0.35); }
+}
+@media (max-width: 768px) {
+  .step { padding: 30px 24px 28px; }
+  .how__cta { margin-top: 40px; }
+  .how__cta .btn { width: 100%; }
+}
+
+/* ===== GALERIA ===== */
+.gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; align-items: start; }
+.gallery figure { border-radius: var(--r-md); overflow: hidden; aspect-ratio: 4 / 5; background: var(--pink-50); }
+.gallery figure:nth-child(3n+2) { margin-top: 56px; }
+.gallery img { width: 100%; height: 100%; object-fit: cover; transition: transform 1.2s var(--ease); }
+.gallery figure:hover img { transform: scale(1.06); }
+.gallery__cta { display: flex; justify-content: center; margin-top: 40px; }
+
+@media (max-width: 768px) {
+  .gallery { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .gallery figure { border-radius: 18px; }
+  .gallery figure:nth-child(3n+2) { margin-top: 0; }
+  .gallery figure:nth-child(2n) { margin-top: 32px; }
+  .gallery__cta { margin-top: 32px; }
+  .gallery__cta .btn { width: 100%; }
+}
+
+/* ===== FAQ ===== */
+.faq { background: var(--pink-50); }
+.faq .wave { color: var(--pink-50); }
+.faq__in { display: grid; grid-template-columns: 0.8fr 1.2fr; gap: 64px; align-items: start; }
+.faq__side { position: sticky; top: calc(var(--nav-h) + 40px); }
+.faq__side .btn { margin-top: 28px; }
+.qa { background: var(--white); border-radius: var(--r-md); border: 1px solid rgba(194, 31, 138, 0.12); transition: box-shadow .5s var(--ease), opacity .8s var(--ease), transform .8s var(--ease); }
+.qa + .qa { margin-top: 14px; }
+.qa.open { box-shadow: 0 20px 44px -28px rgba(194, 31, 138, 0.45); }
+.qa__q {
+  width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 20px;
+  padding: 22px 26px; text-align: left;
+  font-family: var(--ff-head); font-weight: 700; font-size: 18px; line-height: 1.35;
+}
+.qa__ico {
+  width: 34px; height: 34px; border-radius: 50%; flex-shrink: 0; position: relative;
+  background: var(--pink-50); transition: background .4s, transform .5s var(--ease);
+}
+.qa__ico::before, .qa__ico::after {
+  content: ''; position: absolute; left: 50%; top: 50%; width: 12px; height: 2px; border-radius: 2px;
+  background: var(--pink); transform: translate(-50%, -50%); transition: transform .5s var(--ease), background .4s;
+}
+.qa__ico::after { transform: translate(-50%, -50%) rotate(90deg); }
+.qa.open .qa__ico { background: var(--pink); transform: rotate(180deg); }
+.qa.open .qa__ico::before, .qa.open .qa__ico::after { background: var(--white); }
+.qa.open .qa__ico::after { transform: translate(-50%, -50%) rotate(0deg); }
+.qa__a { display: grid; grid-template-rows: 0fr; transition: grid-template-rows .55s var(--ease); }
+.qa.open .qa__a { grid-template-rows: 1fr; }
+.qa__a > div { overflow: hidden; }
+.qa__a p { padding: 0 26px 24px; color: var(--ink-soft); font-size: 15px; text-wrap: pretty; }
+
+@media (max-width: 900px) {
+  .faq__in { grid-template-columns: 1fr; gap: 36px; }
+  .faq__side { position: static; text-align: center; display: flex; flex-direction: column; align-items: center; }
+}
+@media (max-width: 768px) {
+  .qa__q { padding: 18px 20px; font-size: 17px; }
+  .qa__a p { padding: 0 20px 20px; }
+  .faq__side .btn { display: none; }
+}
+
+/* ===== KONTAKT ===== */
+.contact__grid { display: grid; grid-template-columns: 1.3fr 0.7fr; gap: 28px; align-items: stretch; }
+.cta-card {
+  position: relative; overflow: hidden;
+  background: linear-gradient(135deg, #F9D3E9 0%, #EEDDF3 48%, #CFE7FA 100%);
+  color: var(--ink); border-radius: 36px;
+  padding: 44px 48px;
+}
+.cta-card::before, .cta-card::after { content: ''; position: absolute; border-radius: 50%; pointer-events: none; }
+.cta-card::before { width: 320px; height: 320px; right: -110px; top: -120px; background: radial-gradient(circle, rgba(255, 255, 255, 0.7), transparent 70%); animation: float 9s ease-in-out infinite; }
+.cta-card::after { width: 260px; height: 260px; left: -90px; bottom: -120px; background: radial-gradient(circle, rgba(255, 210, 63, 0.35), transparent 70%); animation: float 11s ease-in-out 2s infinite; }
+.cta-card > * { position: relative; z-index: 1; }
+.cta-card .eyebrow { color: var(--pink-d); }
+.cta-card .h2 { color: var(--ink); }
+.cta-card .lead { color: var(--ink-soft); }
+.cta-card__btns { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 28px; }
+.info { list-style: none; margin-top: 30px; padding-top: 26px; border-top: 1px solid rgba(30, 33, 66, 0.12); display: grid; grid-template-columns: 1fr 1fr; gap: 18px 24px; }
+.info li { display: flex; align-items: center; gap: 14px; font-size: 15px; color: var(--ink); }
+.info a:hover { color: var(--pink); }
+.info__ico { width: 40px; height: 40px; border-radius: 12px; background: rgba(255, 255, 255, 0.75); color: var(--pink); display: grid; place-items: center; flex-shrink: 0; }
+.info__ico svg { width: 19px; height: 19px; }
+.info small { display: block; font-size: 12px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-soft); }
+.socials { display: flex; gap: 10px; }
+.socials a {
+  width: 46px; height: 46px; border-radius: 50%; display: grid; place-items: center;
+  background: rgba(255, 255, 255, 0.75); color: var(--ink); transition: background .3s, color .3s, transform .45s var(--ease);
+}
+.socials a:hover { background: var(--pink); color: var(--white); transform: translateY(-3px); }
+.socials svg { width: 20px; height: 20px; }
+.map { border-radius: 36px; overflow: hidden; min-height: 420px; background: var(--sky-50); border: 1px solid var(--line); }
+.map iframe { width: 100%; height: 100%; min-height: 420px; border: 0; display: block; }
+
+@media (max-width: 1100px) {
+  .contact__grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 768px) {
+  .cta-card { padding: 40px 24px; border-radius: 28px; }
+  .cta-card__btns { flex-direction: column; align-items: stretch; }
+  .info { grid-template-columns: 1fr; gap: 16px; }
+  .map, .map iframe { min-height: 320px; border-radius: 28px; }
+}
+
+.info li > span:last-child { min-width: 0; overflow-wrap: break-word; }
+.nowrap { white-space: nowrap; }
+/* Zdanie/fraza trzyma się razem: jak się nie mieści, przeskakuje w całości do nowej linii */
+.keep { display: inline-block; }
+.qa__a .keep { display: block; }
+.qa__q, .qa__a p { text-wrap: balance; }
+
+/* ===== STOPKA ===== */
+.ftr { padding: 56px 0 48px; border-top: 1px solid var(--line); }
+.ftr__in { display: flex; justify-content: center; text-align: center; }
+.ftr__in > div { display: flex; flex-direction: column; align-items: center; }
+.ftr__tag { color: var(--ink-soft); font-size: 15px; margin-top: 12px; }
+
+/* ===== PASEK MOBILE ===== */
+.mbar {
+  position: fixed; left: 12px; right: 12px; bottom: calc(12px + env(safe-area-inset-bottom)); z-index: 40;
+  display: none; grid-template-columns: 1fr 1fr; gap: 8px;
+  background: rgba(255, 255, 255, 0.94); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+  padding: 8px; border-radius: 999px; box-shadow: 0 16px 40px -12px rgba(30, 33, 66, 0.4);
+  transform: translateY(140%); transition: transform .6s var(--ease);
+}
+.mbar.show { transform: none; }
+.mbar .btn { padding: 15px 12px; font-size: 15px; }
+
+@media (max-width: 768px) {
+  .ftr { padding: 48px 0 112px; }
+  .mbar { display: grid; }
+}
+
+
+@media (max-width: 768px) {
+  .wrap { padding: 0 20px; }
+  .sec { padding: 64px 0; }
+  .sec-head { margin-bottom: 40px; }
+  .lead { font-size: 16px; }
+  .wave { height: 36px; }
+  .wave--top { top: -35px; }
+  .wave--bottom { bottom: -35px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+  .fade { opacity: 1; transform: none; }
+}
+</style>
+</head>
+<body>
+
+<nav class="nav" id="nav" aria-label="Główna nawigacja">
+  <div class="wrap nav__in">
+    <a href="#top" class="logo" aria-label="Laboratorium Zabawy, strona główna">
+      <img src="images/logo.jpg" alt="Logo Laboratorium Zabawy" width="48" height="48">
+      <span>Laboratorium Zabawy<small>Suwałki</small></span>
+    </a>
+    <div class="nav__links">
+      <a href="#oferta">Oferta</a>
+      <a href="#jak">Jak to wygląda</a>
+      <a href="#galeria">Galeria</a>
+      <a href="#faq">FAQ</a>
+      <a href="#kontakt">Kontakt</a>
+      <a href="#kontakt" class="btn btn--pink nav__cta">Zarezerwuj termin</a>
+    </div>
+    <button class="burger" id="burger" aria-label="Otwórz menu" aria-expanded="false" aria-controls="mmenu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="mmenu" id="mmenu" aria-hidden="true">
+  <a href="#kontakt" class="btn btn--pink">Zarezerwuj termin</a>
+  <a href="#oferta">Oferta</a>
+  <a href="#jak">Jak to wygląda</a>
+  <a href="#galeria">Galeria</a>
+  <a href="#faq">FAQ</a>
+  <a href="#kontakt">Kontakt</a>
+</div>
+
+<main id="top">
+
+<section class="hero" id="hero">
+  <svg class="deco deco--1" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 1.5l2.9 6.6 7.1.7-5.4 4.8 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 8.8l7.1-.7z"/></svg>
+  <svg class="deco deco--2" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="12" cy="12" r="10"/></svg>
+  <svg class="deco deco--3" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 21s-7.5-4.6-9.6-9.2C.9 8.4 3 4.5 6.8 4.5c2.1 0 3.6 1.2 5.2 3 1.6-1.8 3.1-3 5.2-3 3.8 0 5.9 3.9 4.4 7.3C19.5 16.4 12 21 12 21z"/></svg>
+  <svg class="deco deco--4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" transform="rotate(20 12 12)"/></svg>
+
+  <div class="wrap hero__in">
+    <div class="hero__text">
+      <p class="eyebrow rise">Urodziny · Warsztaty · Eventy</p>
+      <h1 class="hero__h1 rise">Tworzymy <em>kreatywne eventy</em> od pomysłu po realizację!</h1>
+      <p class="hero__sub rise">Urodziny, warsztaty, animacje i&nbsp;bale <span class="hero__sub-line">dla dzieci, przedszkoli i&nbsp;szkół.</span> <span class="hero__sub-line">Z sercem, pasją i&nbsp;efektem WOW.</span></p>
+      <div class="hero__btns rise">
+        <a href="#kontakt" class="btn btn--pink">Zarezerwuj termin</a>
+        <a href="#oferta" class="btn btn--ghost hero__more">Zobacz ofertę</a>
+      </div>
+    </div>
+
+    <div class="hero__media">
+      <div class="hero__blob" aria-hidden="true"></div>
+      <div class="hero__photo">
+        <img src="images/hero.jpg" alt="Dziewczynka podczas zabawy w Laboratorium Zabawy, na stole kolorowe kolby i flamastry" width="1440" height="1470" fetchpriority="high">
+      </div>
+      <div class="badge badge--rating">
+        <div class="badge__ico"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 1.5l2.9 6.6 7.1.7-5.4 4.8 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 8.8l7.1-.7z"/></svg></div>
+        <div><b>4,9 / 5</b><span>189 opinii Google</span></div>
+      </div>
+      <div class="badge badge--award">
+        <div class="badge__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="9" r="6"/><path d="M8.5 14L7 22l5-3 5 3-1.5-8"/></svg></div>
+        <div><b>Laureat</b><span>Orłów Branży Dziecięcej</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="oferta">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow fade">Oferta</p>
+      <h2 class="h2 fade">Co dla Was przygotujemy?</h2>
+      <p class="lead fade">Każde wydarzenie układamy od zera: pod okazję, wiek dzieci i Wasze pomysły. <span class="keep">Wy wybieracie, my zajmujemy się resztą.</span></p>
+    </div>
+
+    <div class="offer__grid">
+      <article class="card fade">
+        <div class="card__img">
+          <span class="card__tag t-pink"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21h16v-7a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2z"/><path d="M4 16c1.3 0 1.3-1 2.7-1s1.3 1 2.6 1 1.4-1 2.7-1 1.3 1 2.7 1 1.3-1 2.6-1 1.4 1 2.7 1"/><path d="M12 12V8M8 12V9M16 12V9"/><path d="M12 5.5a1 1 0 0 0 1-1C13 3.5 12 2 12 2s-1 1.5-1 2.5a1 1 0 0 0 1 1z"/></svg></span>
+          <img src="images/urodziny.jpg" alt="Urodziny w Laboratorium Zabawy, dzieci przy udekorowanym stole z balonem" loading="lazy" style="object-position: 50% 30%">
+        </div>
+        <div class="card__body">
+          <h3 class="card__h">Urodziny</h3>
+          <p class="card__p">Tematyczne przyjęcia urodzinowe, na których solenizant czuje się jak gwiazda. <span class="keep">Animatorki prowadzą zabawę od pierwszej do ostatniej minuty.</span></p>
+          <a href="#kontakt" class="card__link">Zapytaj o termin <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </article>
+
+      <article class="card fade">
+        <div class="card__img">
+          <span class="card__tag t-sky"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22a10 10 0 1 1 10-10c0 2.8-2.2 3.5-4 3.5h-1.5a2 2 0 0 0-1.5 3.3c.6.7.3 3.2-3 3.2z"/><circle cx="7.5" cy="11" r="1.3" fill="currentColor"/><circle cx="11" cy="7" r="1.3" fill="currentColor"/><circle cx="16" cy="8.5" r="1.3" fill="currentColor"/></svg></span>
+          <img src="images/warsztaty.jpg" alt="Warsztaty kreatywne, dzieci przy wspólnym stole malują kubki" loading="lazy" style="object-position: 50% 55%">
+        </div>
+        <div class="card__body">
+          <h3 class="card__h">Warsztaty</h3>
+          <p class="card__p">Slime, masy plastyczne, mydełka, kosmetyki i żele pod prysznic. <span class="keep">Dzieci tworzą własnymi rękami i zabierają swoje dzieła do domu.</span></p>
+          <a href="#kontakt" class="card__link">Zapytaj o termin <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </article>
+
+      <article class="card fade">
+        <div class="card__img">
+          <span class="card__tag t-sun"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5.8 11.3L2 22l10.7-3.8"/><path d="M4 3h.01M22 8h.01M15 2h.01M22 20h.01"/><path d="M22 2l-2.2.8a2.9 2.9 0 0 0-1.9 3.2c.1.9-.6 1.7-1.5 1.7h-.4c-.9 0-1.6.7-1.8 1.5L14 10"/><path d="M9.9 9.8L14.2 14c.9.9.7 2.5-.4 3.1-2 1.1-4.5.6-6-1.1l-.9-.9c-1.6-1.6-2.1-4-1-6 .6-1.1 2.2-1.3 3.1-.4z"/></svg></span>
+          <img src="images/eventy.jpg" alt="Impreza halloweenowa, dzieci przy stole pokazują kciuki w górę" loading="lazy" style="object-position: 50% 62%">
+        </div>
+        <div class="card__body">
+          <h3 class="card__h">Eventy</h3>
+          <p class="card__p">Imprezy tematyczne na każdą okazję: Halloween, święta czy festyny. <span class="keep">Wymyślamy, przygotowujemy i prowadzimy całość.</span></p>
+          <a href="#kontakt" class="card__link">Zapytaj o termin <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </article>
+
+      <article class="card fade">
+        <div class="card__img">
+          <span class="card__tag t-pink"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><path d="M9 9h.01M15 9h.01"/></svg></span>
+          <img src="images/animacje.jpg" alt="Animacje świąteczne, Grinch i animatorka bawią się z dziećmi siedzącymi w kole" loading="lazy" style="object-position: 50% 45%">
+        </div>
+        <div class="card__body">
+          <h3 class="card__h">Animacje</h3>
+          <p class="card__p">Zabawy ruchowe, tańce, konkursy i postacie, które dzieci uwielbiają. <span class="keep">Mnóstwo energii i śmiechu od początku do końca.</span></p>
+          <a href="#kontakt" class="card__link">Zapytaj o termin <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </article>
+
+      <article class="card fade">
+        <div class="card__img">
+          <span class="card__tag t-sky"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="7" r="3.5"/><circle cx="17" cy="9" r="2.5"/><path d="M2 21v-1.5A5.5 5.5 0 0 1 7.5 14h3a5.5 5.5 0 0 1 5.5 5.5V21"/><path d="M16 14.5h1a4 4 0 0 1 4 4V21"/></svg></span>
+          <img src="images/integracje.jpg" alt="Zabawa integracyjna, dzieci trzymają się za ręce przed ścianką z logo Laboratorium Zabawy" loading="lazy" style="object-position: 50% 30%">
+        </div>
+        <div class="card__body">
+          <h3 class="card__h">Integracje</h3>
+          <p class="card__p">Zabawy integracyjne dla klas i grup przedszkolnych. <span class="keep">Dzieci lepiej się poznają, uczą się współpracy i świetnie bawią.</span></p>
+          <a href="#kontakt" class="card__link">Zapytaj o termin <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </article>
+
+      <article class="card fade">
+        <div class="card__img">
+          <span class="card__tag t-sun"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 9.5C2 7 4 5 6.5 5c1.8 0 3.2 1 5.5 3 2.3-2 3.7-3 5.5-3C20 5 22 7 22 9.5c0 2.6-2 4.5-4.5 4.5-1.8 0-3.2-1-5.5-3-2.3 2-3.7 3-5.5 3C4 14 2 12.1 2 9.5z"/><path d="M8 14l-1 5M16 14l1 5"/></svg></span>
+          <img src="images/bale.jpg" alt="Bal dla dzieci, maluchy tańczą w kolorowych hawajskich naszyjnikach" loading="lazy" style="object-position: 50% 55%">
+        </div>
+        <div class="card__body">
+          <h3 class="card__h">Bale</h3>
+          <p class="card__p">Bale karnawałowe i przebierańce z muzyką, tańcami i konkursami. <span class="keep">Organizujemy je u nas, a także w przedszkolach i szkołach.</span></p>
+          <a href="#kontakt" class="card__link">Zapytaj o termin <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </article>
+    </div>
+
+    <div class="offer__more fade">
+      <p>Organizujemy też:</p>
+      <span class="chip">Półkolonie</span>
+      <span class="chip">Zajęcia dla przedszkoli i szkół</span>
+    </div>
+  </div>
+</section>
+
+<section class="sec how" id="jak">
+  <div class="wave wave--top" aria-hidden="true"><svg viewBox="0 0 1440 60" preserveAspectRatio="none"><path fill="currentColor" d="M0 60V32C180 4 360 0 540 14s360 40 540 34 270-30 360-40v60z"/></svg></div>
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow fade">Jak to wygląda</p>
+      <h2 class="h2 fade">Trzy kroki do udanej zabawy</h2>
+      <p class="lead fade">Bez stresu i bez planowania na własną rękę. <span class="keep">Wystarczy jedna wiadomość.</span></p>
+    </div>
+
+    <div class="steps">
+      <div class="step fade">
+        <div class="step__num">1</div>
+        <h3 class="step__h">Napisz lub zadzwoń</h3>
+        <p class="step__p">Podaj datę, okazję i wiek dzieci. <span class="keep">Sprawdzimy wolny termin i doradzimy, co wybrać.</span></p>
+      </div>
+      <div class="step fade">
+        <div class="step__num">2</div>
+        <h3 class="step__h">Dobieramy scenariusz</h3>
+        <p class="step__p">Proponujemy atrakcje dopasowane do wieku i zainteresowań: od slime'a, przez eksperymenty, po tańce.</p>
+      </div>
+      <div class="step fade">
+        <div class="step__num">3</div>
+        <h3 class="step__h">Wy się bawicie</h3>
+        <p class="step__p">My przygotowujemy materiały i prowadzimy całą zabawę. <span class="keep">Wy tylko świętujecie i robicie zdjęcia.</span></p>
+      </div>
+    </div>
+
+    <div class="how__cta fade">
+      <a href="https://m.me/100077829836074" target="_blank" rel="noopener" class="btn btn--pink"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.4 2 2 6.1 2 11.6c0 2.9 1.2 5.4 3.1 7.1V22l2.9-1.6c1.2.3 2.5.5 3.9.5 5.6 0 10-4.1 10-9.6S17.6 2 12 2zm1 12.9l-2.5-2.7-4.9 2.7 5.4-5.7 2.6 2.7 4.8-2.7z"/></svg>Napisz na Messengerze</a>
+    </div>
+  </div>
+  <div class="wave wave--bottom" aria-hidden="true"><svg viewBox="0 0 1440 60" preserveAspectRatio="none"><path fill="currentColor" d="M0 60V28C200 52 400 58 620 40S1040 2 1240 8c80 2 150 12 200 22v30z"/></svg></div>
+</section>
+
+<section class="sec" id="galeria">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow fade">Galeria</p>
+      <h2 class="h2 fade">Tak się u nas bawimy</h2>
+      <p class="lead fade">Wybuchające wulkany, świecący slime i piana po łokcie. <span class="keep">Zobacz, jak wyglądają nasze zajęcia.</span></p>
+    </div>
+
+    <div class="gallery">
+      <figure class="fade"><img src="images/galeria-wulkan.jpg" alt="Dziewczynka dodaje barwnik do wybuchającego wulkanu" loading="lazy" style="object-position: 45% 55%"></figure>
+      <figure class="fade"><img src="images/galeria-slime-uv.jpg" alt="Dzieci robią świecący slime w ultrafioletowym świetle" loading="lazy" style="object-position: 40% 50%"></figure>
+      <figure class="fade"><img src="images/galeria-probowki.jpg" alt="Chłopcy przelewają świecące płyny do probówek" loading="lazy" style="object-position: 40% 45%"></figure>
+      <figure class="fade"><img src="images/galeria-piana.jpg" alt="Dzieci bawią się kolorową pianą w misce" loading="lazy" style="object-position: 55% 60%"></figure>
+      <figure class="fade"><img src="images/galeria-slime.jpg" alt="Grupa dzieci przy stole robi slime pod okiem animatorki" loading="lazy" style="object-position: 50% 40%"></figure>
+      <figure class="fade"><img src="images/galeria-czarownica.jpg" alt="Animatorka przebrana za czarownicę z neonowym makijażem prowadzi pokaz" loading="lazy" style="object-position: 40% 45%"></figure>
+    </div>
+
+    <div class="gallery__cta fade">
+      <a href="https://www.instagram.com/laboratoriumzabawy" target="_blank" rel="noopener" class="btn btn--ghost"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5.5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.6" cy="6.4" r="1" fill="currentColor" stroke="none"/></svg>Więcej zdjęć na Instagramie</a>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ: odpowiedzi ogólne, DO POTWIERDZENIA z właścicielką -->
+<section class="sec faq" id="faq">
+  <div class="wave wave--top" aria-hidden="true"><svg viewBox="0 0 1440 60" preserveAspectRatio="none"><path fill="currentColor" d="M0 60V20c160 26 340 40 560 26S980 0 1180 4c110 2 200 14 260 26v30z"/></svg></div>
+  <div class="wrap faq__in">
+    <div class="faq__side">
+      <p class="eyebrow fade">FAQ</p>
+      <h2 class="h2 fade">Najczęstsze pytania rodziców</h2>
+      <p class="lead fade">Nie ma tu Twojego pytania? <span class="keep">Napisz do nas, chętnie odpowiemy.</span></p>
+      <a href="https://m.me/100077829836074" target="_blank" rel="noopener" class="btn btn--pink fade">Zapytaj na Messengerze</a>
+    </div>
+
+    <div class="faq__list">
+      <div class="qa fade">
+        <button class="qa__q" aria-expanded="false">Dla dzieci w jakim wieku są Wasze zajęcia?<span class="qa__ico" aria-hidden="true"></span></button>
+        <div class="qa__a"><div><p>Bawimy się z dziećmi w wieku przedszkolnym i szkolnym. <span class="keep">Program zawsze dopasowujemy do wieku, tak żeby i młodsi, i starsi bawili się świetnie.</span></p></div></div>
+      </div>
+      <div class="qa fade">
+        <button class="qa__q" aria-expanded="false">Ile dzieci może przyjść na urodziny?<span class="qa__ico" aria-hidden="true"></span></button>
+        <!-- DO POTWIERDZENIA -->
+        <div class="qa__a"><div><p>Liczbę gości ustalamy indywidualnie przy rezerwacji. <span class="keep">Napisz, ile dzieci planujesz zaprosić, a dobierzemy atrakcje tak, żeby każdy był zaangażowany.</span></p></div></div>
+      </div>
+      <div class="qa fade">
+        <button class="qa__q" aria-expanded="false">Ile trwa przyjęcie urodzinowe?<span class="qa__ico" aria-hidden="true"></span></button>
+        <!-- DO POTWIERDZENIA -->
+        <div class="qa__a"><div><p>Czas zależy od wybranego scenariusza i atrakcji. <span class="keep">Wszystkie szczegóły podajemy przy rezerwacji terminu.</span></p></div></div>
+      </div>
+      <div class="qa fade">
+        <button class="qa__q" aria-expanded="false">Czy możemy przynieść tort i poczęstunek?<span class="qa__ico" aria-hidden="true"></span></button>
+        <!-- DO POTWIERDZENIA -->
+        <div class="qa__a"><div><p>Tak, tort i przekąski możecie przynieść ze sobą. <span class="keep">Podpowiemy, co najlepiej sprawdza się podczas dziecięcej imprezy.</span></p></div></div>
+      </div>
+      <div class="qa fade">
+        <button class="qa__q" aria-expanded="false">Czy prowadzicie zajęcia w przedszkolach i szkołach?<span class="qa__ico" aria-hidden="true"></span></button>
+        <div class="qa__a"><div><p>Tak. Warsztaty, animacje i bale prowadzimy także w przedszkolach i szkołach, a grupy chętnie zapraszamy do nas.</p></div></div>
+      </div>
+      <div class="qa fade">
+        <button class="qa__q" aria-expanded="false">Z jakim wyprzedzeniem rezerwować termin?<span class="qa__ico" aria-hidden="true"></span></button>
+        <!-- DO POTWIERDZENIA -->
+        <div class="qa__a"><div><p>Weekendy szybko się zapełniają, dlatego warto odezwać się kilka tygodni wcześniej. <span class="keep">Wolne terminy sprawdzimy od ręki na Messengerze lub przez telefon.</span></p></div></div>
+      </div>
+    </div>
+  </div>
+  <div class="wave wave--bottom" aria-hidden="true"><svg viewBox="0 0 1440 60" preserveAspectRatio="none"><path fill="currentColor" d="M0 60V30C240 6 480 0 720 16s480 40 720 20v24z"/></svg></div>
+</section>
+
+<section class="sec" id="kontakt">
+  <div class="wrap contact__grid">
+    <div class="cta-card fade">
+      <p class="eyebrow">Kontakt</p>
+      <h2 class="h2">Zarezerwuj termin</h2>
+      <p class="lead">Napisz lub zadzwoń, podaj datę i wiek dzieci, a my zajmiemy się resztą.</p>
+
+      <div class="cta-card__btns">
+        <a href="https://m.me/100077829836074" target="_blank" rel="noopener" class="btn btn--pink"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.4 2 2 6.1 2 11.6c0 2.9 1.2 5.4 3.1 7.1V22l2.9-1.6c1.2.3 2.5.5 3.9.5 5.6 0 10-4.1 10-9.6S17.6 2 12 2zm1 12.9l-2.5-2.7-4.9 2.7 5.4-5.7 2.6 2.7 4.8-2.7z"/></svg>Napisz na Messengerze</a>
+        <a href="tel:+48730337168" class="btn btn--sun"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>Zadzwoń: 730 337 168</a>
+      </div>
+
+      <ul class="info">
+        <li>
+          <span class="info__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s-7-6.2-7-12a7 7 0 0 1 14 0c0 5.8-7 12-7 12z"/><circle cx="12" cy="10" r="2.5"/></svg></span>
+          <span><small>Adres</small>ul. Teofila Noniewicza 93A, <span class="nowrap">16-400 Suwałki</span></span>
+        </li>
+        <li>
+          <span class="info__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="3"/><path d="M2.5 6.5L12 13l9.5-6.5"/></svg></span>
+          <span><small>E-mail</small><a href="mailto:laboratoriumzabawy.info@gmail.com">laboratoriumzabawy.info<wbr>@gmail.com</a></span>
+        </li>
+        <li>
+          <span class="info__ico"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 1.5l2.9 6.6 7.1.7-5.4 4.8 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 8.8l7.1-.7z"/></svg></span>
+          <span><small>Opinie</small><a href="https://share.google/ZofMKuRMCLUlNiWGI" target="_blank" rel="noopener">4,9 / 5 na podstawie <span class="keep">189 opinii Google</span></a></span>
+        </li>
+        <li>
+      <div class="socials">
+        <a href="https://www.facebook.com/100077829836074" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 8.5V6.8c0-.8.5-1.3 1.3-1.3H17V2.2h-2.6C11.6 2.2 10.4 4 10.4 6.4v2.1H8v3.3h2.4V22H14V11.8h2.6l.4-3.3z"/></svg></a>
+        <a href="https://www.instagram.com/laboratoriumzabawy" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5.5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.6" cy="6.4" r="1" fill="currentColor" stroke="none"/></svg></a>
+        <a href="https://m.me/100077829836074" target="_blank" rel="noopener" aria-label="Messenger"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.4 2 2 6.1 2 11.6c0 2.9 1.2 5.4 3.1 7.1V22l2.9-1.6c1.2.3 2.5.5 3.9.5 5.6 0 10-4.1 10-9.6S17.6 2 12 2zm1 12.9l-2.5-2.7-4.9 2.7 5.4-5.7 2.6 2.7 4.8-2.7z"/></svg></a>
+      </div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="map fade">
+      <iframe title="Mapa dojazdu do Laboratorium Zabawy, Noniewicza 93A w Suwałkach" src="https://www.google.com/maps?q=Teofila+Noniewicza+93A,+16-400+Suwa%C5%82ki&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="ftr">
+  <div class="wrap ftr__in">
+    <div>
+      <a href="#top" class="logo">
+        <img src="images/logo.jpg" alt="" width="48" height="48">
+        <span>Laboratorium Zabawy<small>Suwałki</small></span>
+      </a>
+      <p class="ftr__tag">Kreatywne eventy dla dzieci z efektem WOW.</p>
+    </div>
+  </div>
+</footer>
+
+<div class="mbar" id="mbar">
+  <a href="tel:+48730337168" class="btn btn--sun"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>Zadzwoń</a>
+  <a href="https://m.me/100077829836074" target="_blank" rel="noopener" class="btn btn--pink"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.4 2 2 6.1 2 11.6c0 2.9 1.2 5.4 3.1 7.1V22l2.9-1.6c1.2.3 2.5.5 3.9.5 5.6 0 10-4.1 10-9.6S17.6 2 12 2zm1 12.9l-2.5-2.7-4.9 2.7 5.4-5.7 2.6 2.7 4.8-2.7z"/></svg>Messenger</a>
+</div>
+
+<script>
+// Nav - cień po przewinięciu
+const nav = document.getElementById('nav');
+const onScroll = () => nav.classList.toggle('is-scrolled', window.scrollY > 10);
+window.addEventListener('scroll', onScroll, { passive: true });
+onScroll();
+
+// Menu mobilne
+const burger = document.getElementById('burger');
+const mmenu = document.getElementById('mmenu');
+const setMenu = open => {
+  burger.classList.toggle('open', open);
+  mmenu.classList.toggle('open', open);
+  burger.setAttribute('aria-expanded', open);
+  burger.setAttribute('aria-label', open ? 'Zamknij menu' : 'Otwórz menu');
+  mmenu.setAttribute('aria-hidden', !open);
+  document.body.style.overflow = open ? 'hidden' : '';
+};
+burger.addEventListener('click', () => setMenu(!mmenu.classList.contains('open')));
+mmenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setMenu(false)));
+
+// FAQ - akordeon, otwarte jedno pytanie naraz
+document.querySelectorAll('.qa__q').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const item = btn.parentElement;
+    const willOpen = !item.classList.contains('open');
+    document.querySelectorAll('.qa.open').forEach(o => {
+      o.classList.remove('open');
+      o.querySelector('.qa__q').setAttribute('aria-expanded', 'false');
+    });
+    if (willOpen) {
+      item.classList.add('open');
+      btn.setAttribute('aria-expanded', 'true');
+    }
+  });
+});
+
+// Pasek mobile - pokazuje się po zjechaniu z hero
+const mbar = document.getElementById('mbar');
+new IntersectionObserver(([e]) => mbar.classList.toggle('show', !e.isIntersecting), { threshold: 0.15 })
+  .observe(document.getElementById('hero'));
+
+// Fade on scroll - zawsze w kolejności z góry na dół
+const fades = [...document.querySelectorAll('.fade')];
+let revealed = 0;
+const pending = new Set();
+let frame = null;
+
+const clearDelay = el => el.addEventListener('transitionend', () => { el.style.transitionDelay = ''; }, { once: true });
+
+const showInstant = el => {
+  el.style.transition = 'none';
+  el.classList.add('on');
+  fadeObs.unobserve(el);
+  requestAnimationFrame(() => { el.style.transition = ''; });
+};
+
+const flush = () => {
+  frame = null;
+  if (!pending.size) return;
+  const maxIdx = Math.max(...[...pending].map(el => fades.indexOf(el)));
+  let step = 0;
+  for (let i = revealed; i <= maxIdx; i++) {
+    const el = fades[i];
+    if (el.classList.contains('on')) continue;
+    if (el.getBoundingClientRect().bottom < 0) {
+      showInstant(el);
+    } else {
+      el.style.transitionDelay = Math.min(step * 0.09, 0.45) + 's';
+      el.classList.add('on');
+      clearDelay(el);
+      fadeObs.unobserve(el);
+      step++;
+    }
+  }
+  revealed = Math.max(revealed, maxIdx + 1);
+  pending.clear();
+};
+
+const fadeObs = new IntersectionObserver(entries => {
+  entries.forEach(entry => { if (entry.isIntersecting) pending.add(entry.target); });
+  if (pending.size && !frame) frame = requestAnimationFrame(flush);
+}, { threshold: 0.08 });
+fades.forEach(el => fadeObs.observe(el));
+</script>
+</body>
+</html>
