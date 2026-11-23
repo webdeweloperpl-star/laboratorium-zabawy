@@ -261,8 +261,14 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   .hero__in { min-height: calc(100svh - var(--nav-h)); padding-bottom: 28px; }
   .hero__text { flex: none; padding-top: 0; margin-top: -40px; }
   .hero__h1 { font-size: 36px; margin-top: 12px; }
-  .hero__sub { font-size: 16px; line-height: 1.55; margin-top: 14px; }
-  .hero__sub-line { display: block; }
+  /* "od pomysłu po realizację!" zawsze w jednej linii, odrobinę mniejsze */
+  .hero__h1-sm { display: block; font-size: min(32px, calc((100vw - 40px) * 0.083)); margin-top: 4px; }
+  .hero__sub { font-size: 14px; line-height: 1.6; margin-top: 14px; }
+}
+@media (max-width: 380px) {
+  .hero__sub { letter-spacing: -0.015em; word-spacing: -0.04em; }
+}
+@media (max-width: 768px) {
   .hero__btns { flex-direction: column; align-items: stretch; margin-top: 24px; gap: 4px; }
   .hero__btns .btn { text-align: center; }
   .hero__media { order: -1; flex: 1 0 auto; min-height: clamp(220px, 70vw, 320px); margin: 0 -20px; padding: 0; display: block; z-index: 0; }
@@ -283,7 +289,7 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   .badge { padding: 10px 14px 10px 10px; font-size: 13px; border-radius: 16px; }
   .badge b { font-size: 15px; }
   .badge__ico { width: 36px; height: 36px; border-radius: 12px; }
-  .badge--rating { left: 20px; right: auto; top: 16px; bottom: auto; z-index: 3; }
+  .badge--rating { left: 20px; right: auto; top: 26px; bottom: auto; z-index: 3; }
   .deco { display: none; }
   .hero .eyebrow { font-size: 12px; letter-spacing: 0.07em; }
   .hero .eyebrow::before { display: none; }
@@ -567,7 +573,7 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   <div class="wrap hero__in">
     <div class="hero__text">
       <p class="eyebrow rise">Urodziny · Warsztaty · Eventy</p>
-      <h1 class="hero__h1 rise">Tworzymy <em>kreatywne eventy</em> od pomysłu po realizację!</h1>
+      <h1 class="hero__h1 rise">Tworzymy <em>kreatywne eventy</em> <span class="hero__h1-sm">od pomysłu po realizację!</span></h1>
       <p class="hero__sub rise">Urodziny, warsztaty, animacje i&nbsp;bale <span class="hero__sub-line">dla dzieci, przedszkoli i&nbsp;szkół.</span> <span class="hero__sub-line">Z sercem, pasją i&nbsp;efektem WOW.</span></p>
       <div class="hero__btns rise">
         <a href="#kontakt" class="btn btn--pink">Zarezerwuj termin</a>
